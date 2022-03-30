@@ -11,10 +11,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class AgencyMapper {
     public Agency agencyRequestToAgency(AgencyRequest agencyRequest) {
-        return new Agency(agencyRequest.getName(), agencyRequest.getLocation());
+        return new Agency(agencyRequest.getName(), agencyRequest.getLocation(), agencyRequest.getUserId());
     }
 
     public Agency agencyUpdateToAgency(AgencyUpdate agencyUpdate) {
-        return new Agency(agencyUpdate.getId(), agencyUpdate.getName(), agencyUpdate.getLocation());
+        return new Agency(agencyUpdate.getId(), agencyUpdate.getName(), agencyUpdate.getLocation(), agencyUpdate.getUserId());
     }
 }

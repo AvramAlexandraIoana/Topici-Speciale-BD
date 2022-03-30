@@ -44,4 +44,7 @@ public class TripRequest {
     private Agency agency;
 
 
+    private Long userId;
+
+
 }

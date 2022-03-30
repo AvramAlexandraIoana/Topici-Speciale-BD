@@ -19,4 +19,6 @@ public class AgencyUpdate {
 
     @NotNull(message = "Locatia nu poate fi null!")
     private Location location;
+
+    private Long userId;
 }

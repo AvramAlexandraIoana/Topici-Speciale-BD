@@ -1,10 +1,8 @@
 package com.awbd.proiect.controllers;
 
 import com.awbd.proiect.domain.*;
-import com.awbd.proiect.dto.TripRequest;
 import com.awbd.proiect.dto.UserRolesRequest;
 import com.awbd.proiect.dto.UserTripRequest;
-import com.awbd.proiect.services.LocationService;
 import com.awbd.proiect.services.RoleService;
 import com.awbd.proiect.services.TripService;
 import com.awbd.proiect.services.UserService;

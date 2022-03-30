@@ -23,6 +23,9 @@ public class Trip {
     private Date startDate;
     private Date endDate;
 
+
+    private Long userId;
+
     @ManyToOne
     @JoinColumn(name="agency_id")
     private Agency agency;
@@ -41,7 +44,7 @@ public class Trip {
     public Trip() {
     }
 
-    public Trip(String name, int numberOfSeats, Double price, int duration, Date startDate, Date endDate, Location location, Agency agency) {
+    public Trip(String name, int numberOfSeats, Double price, int duration, Date startDate, Date endDate, Location location, Agency agency, Long userId) {
         this.name = name;
         this.numberOfSeats = numberOfSeats;
         this.price = price;
@@ -50,9 +53,10 @@ public class Trip {
         this.endDate = endDate;
         this.location = location;
         this.agency = agency;
+        this.userId = userId;
     }
 
-    public Trip(Long id, String name, int numberOfSeats, Double price, int duration, Date startDate, Date endDate, Location location, Agency agency) {
+    public Trip(Long id, String name, int numberOfSeats, Double price, int duration, Date startDate, Date endDate, Location location, Agency agency, Long userId) {
         this.id = id;
         this.name = name;
         this.numberOfSeats = numberOfSeats;
@@ -62,6 +66,7 @@ public class Trip {
         this.endDate = endDate;
         this.location = location;
         this.agency = agency;
+        this.userId = userId;
     }
 
 }

@@ -48,5 +48,8 @@ public class TripUpdate {
     @NotNull(message = "Agentia nu poate fi null!")
     private Agency agency;
 
+    private Long userId;
+
+
 
 }

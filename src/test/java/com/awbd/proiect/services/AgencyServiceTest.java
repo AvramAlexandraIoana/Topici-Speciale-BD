@@ -46,8 +46,8 @@ public class AgencyServiceTest {
         Country country = new Country(1L, "Romania");
         Info info = new Info();
         Location location = new Location(1L,"Bucuresti", "Str.Unirii", country, info);
-        Agency agency = new Agency(1L,"Ego Travel Romania", location);
-        Agency savedAgency = new Agency(1L, "Ego Travel Romania", location);
+        Agency agency = new Agency(1L,"Ego Travel Romania", location,1L );
+        Agency savedAgency = new Agency(1L, "Ego Travel Romania", location, 1L);
         when(agencyRepository.save(agency)).thenReturn(savedAgency);
 
         //act
@@ -69,7 +69,7 @@ public class AgencyServiceTest {
         Info info = new Info();
         Location location = new Location(1L,"Bucuresti", "Str.Unirii", country, info);
         when(agencyRepository.findAll()).thenReturn(
-                Arrays.asList(new Agency(1L, "Ego Travel Romania", location))
+                Arrays.asList(new Agency(1L, "Ego Travel Romania", location, 1L))
         );
 
         //act
@@ -90,7 +90,7 @@ public class AgencyServiceTest {
         Country country = new Country(1L, "Romania");
         Info info = new Info();
         Location location = new Location(1L,"Bucuresti", "Str.Unirii", country, info);
-        Agency agency = new Agency(1L, "Ego Travel Romania", location);
+        Agency agency = new Agency(1L, "Ego Travel Romania", location,1L);
         when(agencyRepository.findById(agency.getId())).thenReturn(Optional.of(agency));
 
         //act
@@ -111,7 +111,7 @@ public class AgencyServiceTest {
         Country country = new Country(1L, "Romania");
         Info info = new Info();
         Location location = new Location(1L,"Bucuresti", "Str.Unirii", country, info);
-        Agency agency = new Agency(1L, "Ego Travel Romania", location);
+        Agency agency = new Agency(1L, "Ego Travel Romania", location, 1L);
         when(agencyRepository.findById(agency.getId())).thenReturn(Optional.of(agency));
         when(agencyRepository.save(agency)).thenReturn(agency);
 
@@ -134,7 +134,7 @@ public class AgencyServiceTest {
         Country country = new Country(1L, "Romania");
         Info info = new Info();
         Location location = new Location(1L,"Bucuresti", "Str.Unirii", country, info);
-        Agency agency = new Agency(1L, "Ego Travel Romania", location);
+        Agency agency = new Agency(1L, "Ego Travel Romania", location, 1L);
 
         //act
         agencyService.deleteById(location.getId());

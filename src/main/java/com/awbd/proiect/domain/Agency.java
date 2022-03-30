@@ -21,6 +21,10 @@ public class Agency {
     @JoinColumn(name = "location_id")
     private Location location;
 
+
+    private Long userId;
+
+
     @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
     @ToString.Exclude
@@ -30,15 +34,17 @@ public class Agency {
 
     }
 
-    public Agency(String name, Location location) {
+    public Agency(String name, Location location, Long userId) {
         this.name = name;
         this.location = location;
+        this.userId = userId;
     }
 
-    public Agency(Long id, String name, Location location) {
+    public Agency(Long id, String name, Location location, Long userId) {
         this.id = id;
         this.name = name;
         this.location = location;
+        this.userId = userId;
     }
 
 }

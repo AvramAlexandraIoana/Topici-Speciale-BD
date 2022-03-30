@@ -16,4 +16,6 @@ public class AgencyRequest {
     @NotNull(message = "Locatia nu poate fi null!")
     private Location location;
 
+    private Long userId;
+
 }
